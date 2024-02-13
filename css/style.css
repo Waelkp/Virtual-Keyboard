@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 body {
   background: #360033; /* fallback for old browsers */
@@ -91,7 +91,7 @@ body {
   width: 12%;
 }
 .key-extra-wide {
-  width: 36%;
+  width: 36% !important;
   max-width: 500px;
 }
 /* .key-activatable {
@@ -157,4 +157,11 @@ textarea {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #002a21;
+}
+@media (width < 992px) {
+  .key {
+    height: 35px;
+    width: 6.4%;
+    min-width: 23px;
+  }
 }
