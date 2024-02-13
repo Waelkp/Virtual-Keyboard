@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  background: #360033; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #0b8793,
+    #360033
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #0b8793, #360033);
+  background-size: 240% 140%;
+  animation: gradient-animation 40s ease infinite;
+  min-height: 1000vh;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.keyboard {
+  position: fixed;
+  left: 1%;
+  bottom: 1%;
+  transition: 0.7s;
+  user-select: none;
+  width: 98%;
+  height: 100px;
+  padding: 5px 0px;
+  border-radius: 10px;
+
+  /* Backgound color */
+  /*background: #bbd2c5;
+   background: -webkit-linear-gradient(
+    to bottom,
+    #292e49,
+    #536976,
+    #bbd2c5
+  );
+  background: linear-gradient(
+    to bottom,
+    #292e49,
+    #536976,
+    #bbd2c5
+  ); */
+  background-color: #004134 !important;
+
+  /* Shadow */
+  -webkit-box-shadow: 10px 7px 7px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 7px 7px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 7px 7px 1px rgba(0, 0, 0, 0.75);
+}
+.keyboard-hidden {
+  bottom: -100% !important;
+}
+
+.keys {
+  text-align: center;
+}
+.key {
+  /* text-align: center; */
+  position: relative;
+  height: 45px;
+  width: 6%;
+  min-width: 90px;
+  padding: 0;
+  margin: 3px;
+  border-radius: 4px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1.05rem;
+  outline: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: top;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.key:active {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+.key-wide {
+  width: 12%;
+}
+.key-extra-wide {
+  width: 36%;
+  max-width: 500px;
+}
+/* .key-activatable {
+} */
+.key-activatable::after {
+  position: absolute;
+  content: "";
+  top: 10px;
+  right: 10px;
+  width: 8px;
+  height: 8px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+}
+.key-active::after {
+  background-color: #08ff00;
+}
+.key-dark {
+  background-color: rgba(0, 0, 0, 0.2);
+}
