@@ -88,7 +88,7 @@ body {
   background-color: rgba(255, 255, 255, 0.12);
 }
 .key-wide {
-  width: 12%;
+  width: 12% !important;
 }
 .key-extra-wide {
   width: 36% !important;
@@ -163,5 +163,9 @@ textarea {
     height: 35px;
     width: 6.4%;
     min-width: 23px;
+  }
+  .key-activatable::after {
+    right: 5px;
+    top: 5px;
   }
 }
